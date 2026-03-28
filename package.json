@@ -1,6 +1,6 @@
 {
   "name": "@devinpublic/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI to create notes in .devinpublic",
   "type": "module",
   "main": "./dist/cli.js",
@@ -34,6 +34,7 @@
     "vitest": "^4.1.2"
   },
   "dependencies": {
-    "commander": "^14.0.3"
+    "commander": "^14.0.3",
+    "slugify": "^1.6.8"
   }
 }

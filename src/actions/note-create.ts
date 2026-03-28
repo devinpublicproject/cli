@@ -3,8 +3,8 @@ import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { formatYmd } from '@/utils/date-format.js';
 import {
-  buildNoteFilename,
-  nextSequenceFromFilenames,
+  pickUniqueNoteFilename,
+  slugifyTaskName,
 } from '@/utils/devinpublic-filename.js';
 import { buildMarkdown } from '@/utils/note-markdown.js';
 
@@ -53,9 +53,10 @@ export async function noteCreate(
   await mkdir(dir, { recursive: true });
 
   const ymd = formatYmd(now);
+  const timestampMs = now.getTime();
+  const slug = slugifyTaskName(answer);
   const names = await readdir(dir);
-  const seq = nextSequenceFromFilenames(names, ymd);
-  const filename = buildNoteFilename(ymd, seq);
+  const filename = pickUniqueNoteFilename(names, ymd, timestampMs, slug);
   const filepath = join(dir, filename);
 
   await writeFile(filepath, buildMarkdown(answer), 'utf8');
