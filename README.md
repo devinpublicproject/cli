@@ -1,9 +1,9 @@
-# @devinpublic/dip
+# @devinpublic/cli
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org/)
 
-**dip** (*devinpublic*) is a small, dependency-light CLI that captures what you are about to do and saves it as a dated Markdown note under `.devinpublic/`. It is built with TypeScript, [Commander](https://github.com/tj/commander.js), and ships as an npm package for use in any project.
+The **`dip`** command is provided by **`@devinpublic/cli`**: a small, dependency-light CLI that captures what you are about to do and saves it as a dated Markdown note under `.devinpublic/`. It is built with TypeScript, [Commander](https://github.com/tj/commander.js), and ships as an npm package for use in any project.
 
 ## Why use it?
 
@@ -14,13 +14,13 @@
 ## Installation
 
 ```bash
-npm install @devinpublic/dip
+npm install @devinpublic/cli
 ```
 
 Or run without installing:
 
 ```bash
-npx @devinpublic/dip
+npx @devinpublic/cli
 ```
 
 ## Usage

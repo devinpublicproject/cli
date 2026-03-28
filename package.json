@@ -1,5 +1,5 @@
 {
-  "name": "@devinpublic/dip",
+  "name": "@devinpublic/cli",
   "version": "0.1.0",
   "description": "CLI to create notes in .devinpublic",
   "type": "module",
